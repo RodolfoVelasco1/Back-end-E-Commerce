@@ -1,6 +1,7 @@
 package com.example.ecommerce.Models.Entities;
 
 import com.example.ecommerce.Models.Enums.Rol;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,6 +37,10 @@ public class Usuario implements UserDetails {
 
     private String password;
 
+    private String email;
+
+    private Integer dni;
+
     @Enumerated(EnumType.STRING)
     private Rol rol;
 
@@ -45,6 +50,7 @@ public class Usuario implements UserDetails {
             joinColumns = @JoinColumn(name = "usuario_id"),
             inverseJoinColumns = @JoinColumn(name = "direccion_id")
     )
+    @JsonIgnore
     private Set<Direccion> direcciones = new HashSet<>();
 
     @Override

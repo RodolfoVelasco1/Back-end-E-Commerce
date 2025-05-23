@@ -1,6 +1,7 @@
 package com.example.ecommerce.Models.Entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -34,6 +35,7 @@ public class Direccion extends Base{
     private Localidad localidad;
 
     @ManyToMany(mappedBy = "direcciones")
+    @JsonIgnore
     private Set<Usuario> usuarios = new HashSet<>();
 
 }

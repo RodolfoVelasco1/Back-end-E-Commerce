@@ -195,6 +195,8 @@ public class BackendApplication implements CommandLineRunner {
                 .nombre("Juan")
                 .apellido("Pérez")
                 .password(passwordEncoder.encode("admin123"))
+                .email("admin@gmail.com")
+                .dni(25698412)
                 .rol(Rol.ADMIN)
                 .direcciones(new HashSet<>())
                 .build();
@@ -203,7 +205,9 @@ public class BackendApplication implements CommandLineRunner {
                 .username("maria.garcia")
                 .nombre("María")
                 .apellido("García")
-                .password(passwordEncoder.encode("usuario123"))
+                .password(passwordEncoder.encode("12345"))
+                .email("lamari@gmail.com")
+                .dni(40235896)
                 .rol(Rol.USUARIO)
                 .direcciones(new HashSet<>())
                 .build();
@@ -212,7 +216,9 @@ public class BackendApplication implements CommandLineRunner {
                 .username("carlos.lopez")
                 .nombre("Carlos")
                 .apellido("López")
-                .password(passwordEncoder.encode("usuario456"))
+                .password(passwordEncoder.encode("usuario123"))
+                .email("iamcharlie@gmail.com")
+                .dni(36753159)
                 .rol(Rol.USUARIO)
                 .direcciones(new HashSet<>())
                 .build();
@@ -221,7 +227,9 @@ public class BackendApplication implements CommandLineRunner {
                 .username("ana.martinez")
                 .nombre("Ana")
                 .apellido("Martínez")
-                .password(passwordEncoder.encode("usuario789"))
+                .password(passwordEncoder.encode("password"))
+                .email("anamartinez@gmail.com")
+                .dni(42789456)
                 .rol(Rol.USUARIO)
                 .direcciones(new HashSet<>())
                 .build();
@@ -304,28 +312,28 @@ public class BackendApplication implements CommandLineRunner {
 
     private void crearImagenes() {
         Imagen img1 = Imagen.builder()
-                .url("https://example.com/images/remera-basica-blanca.jpg")
+                .url("https://media.istockphoto.com/id/1348122646/photo/cropped-portrait-of-fashionable-young-female-in-denim-and-white-blank-copy-space-t-shirt-for.jpg?s=612x612&w=is&k=20&c=c90pctAm1_EkSC6DlWhqjvjaqkvlbbfBUkugMIx_mVE=")
                 .build();
         Imagen img2 = Imagen.builder()
-                .url("https://example.com/images/remera-basica-negra.jpg")
+                .url("https://media.istockphoto.com/id/1394060242/photo/a-man-in-a-black-t-shirt.jpg?s=1024x1024&w=is&k=20&c=ZzeZXNf2Ez7rd76Ng3vHxm2ZovU9U3ZE_2c3QRf94yY=")
                 .build();
         Imagen img3 = Imagen.builder()
-                .url("https://example.com/images/zapatillas-deportivas-blancas.jpg")
+                .url("https://media.istockphoto.com/id/106401775/photo/sport-shoe.jpg?s=1024x1024&w=is&k=20&c=7ACt6QG5PIsPET5ihptbeTeO73EMuUmwiQ1qkGv6KCc=")
                 .build();
         Imagen img4 = Imagen.builder()
-                .url("https://example.com/images/zapatillas-deportivas-negras.jpg")
+                .url("https://media.istockphoto.com/id/862529120/photo/mens-sports-shoes.jpg?s=1024x1024&w=is&k=20&c=4rGKZdBiIU1gYEWrdlsqkzUq4_xPZoGYtLaurPsqE7I=")
                 .build();
         Imagen img5 = Imagen.builder()
-                .url("https://example.com/images/jean-clasico-azul.jpg")
+                .url("https://media.istockphoto.com/id/173239968/photo/skinny-tight-blue-jeans-on-white-background.jpg?s=1024x1024&w=is&k=20&c=VQ6GQh9ojjR-Ef-yydcRfaa1WQ7ZMzVM9AFRe8ZRJpI=")
                 .build();
         Imagen img6 = Imagen.builder()
-                .url("https://example.com/images/buzo-algodon-gris.jpg")
+                .url("https://media.istockphoto.com/id/1286846961/photo/grey-hoodie-template-hoodie-sweatshirt-long-sleeve-with-clipping-path-hoody-for-design-mockup.jpg?s=1024x1024&w=is&k=20&c=iTxQalGbcSoPWN9Q1gYK8RBghXdV8TNYzFs2klmmjhE=")
                 .build();
         Imagen img7 = Imagen.builder()
-                .url("https://example.com/images/campera-invierno-negra.jpg")
+                .url("https://media.istockphoto.com/id/1471208973/photo/polyester-black-coat.jpg?s=1024x1024&w=is&k=20&c=kJ98dBWUeGfS_MhlUdDASIU32jUMokm2uFGmYqvJrjo=")
                 .build();
         Imagen img8 = Imagen.builder()
-                .url("https://example.com/images/zapatos-cuero-marron.jpg")
+                .url("https://media.istockphoto.com/id/173839467/photo/isolated-brown-shoes.jpg?s=1024x1024&w=is&k=20&c=xVSpC0qulCCm03qbbML-q3AL9ziSCoRF77o2istTYCM=")
                 .build();
 
         imagenRepository.saveAll(Arrays.asList(img1, img2, img3, img4, img5, img6, img7, img8));

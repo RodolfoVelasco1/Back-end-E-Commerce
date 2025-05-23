@@ -46,6 +46,8 @@ public class AuthService {
 
                 .nombre(request.getFirstname())
         .apellido(request.getLastname())
+        .email(request.getEmail())
+        .dni(request.getDni())
 
                 .direcciones(new HashSet<>())
                 .rol(Rol.USUARIO)
