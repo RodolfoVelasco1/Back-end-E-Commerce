@@ -24,7 +24,6 @@ public class DireccionController extends BaseController<Direccion, Long> {
         this.direccionService = direccionService;
     }
 
-    // Listar direcciones por ID de localidad
     @GetMapping("/localidad/{idLocalidad}")
     public ResponseEntity<List<Direccion>> listarPorLocalidad(@PathVariable Long idLocalidad) {
         try {

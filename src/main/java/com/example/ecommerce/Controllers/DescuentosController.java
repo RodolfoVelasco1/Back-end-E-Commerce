@@ -24,7 +24,6 @@ public class DescuentosController extends BaseController<Descuento, Long> {
         this.descuentosService = descuentosService;
     }
 
-    // Buscar descuento por ID de descuento
     @GetMapping("/{idDescuento}")
     public ResponseEntity<Descuento> obtenerPorIdDescuento(@PathVariable Long idDescuento) {
         try {

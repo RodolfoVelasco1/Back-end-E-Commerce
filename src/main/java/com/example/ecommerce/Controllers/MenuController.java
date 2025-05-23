@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/menu")
-@CrossOrigin(origins = "*") // opcional para frontend
+@CrossOrigin(origins = "*")
 public class MenuController {
 
     @Autowired

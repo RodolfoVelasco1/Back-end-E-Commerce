@@ -47,11 +47,11 @@ public class AuthService {
                 .nombre(request.getFirstname())
         .apellido(request.getLastname())
 
-                .direcciones(new HashSet<>()) // si no las cargás desde el form
+                .direcciones(new HashSet<>())
                 .rol(Rol.USUARIO)
         .build();
         usuarioRepository.save(user);
-        // 5. Generar el token JWT
+
         var jwtToken = jwtService.getToken(user);
         return AuthResponse.builder()
         .token(jwtToken)

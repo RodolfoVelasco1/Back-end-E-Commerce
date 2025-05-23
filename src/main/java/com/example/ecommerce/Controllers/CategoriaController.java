@@ -20,14 +20,14 @@ public class CategoriaController extends BaseController<Categoria, Long> {
         super(categoriaService);
         this.categoriaService = categoriaService;
     }
-    // 🔹 Obtener todas las categorías raíz (sin padre)
+
     @GetMapping("/raiz")
     public ResponseEntity<List<Categoria>> listarCategoriasRaiz() {
         List<Categoria> categoriasRaiz = categoriaService.listarCategoriasRaiz();
         return ResponseEntity.ok(categoriasRaiz);
     }
 
-    // 🔹 Obtener subcategorías de una categoría padre
+
     @GetMapping("/{idPadre}/subcategorias")
     public ResponseEntity<List<Categoria>> listarSubcategorias(@PathVariable Long idPadre) {
         List<Categoria> subcategorias = categoriaService.listarSubcategorias(idPadre);
