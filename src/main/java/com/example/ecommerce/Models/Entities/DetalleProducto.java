@@ -34,7 +34,7 @@ public class DetalleProducto extends Base {
     @JoinColumn(name = "producto_id")
     private Producto producto;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "precio_id")
     private Precio precio;
 
