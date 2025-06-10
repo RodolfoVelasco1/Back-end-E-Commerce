@@ -385,7 +385,7 @@ public class BackendApplication implements CommandLineRunner {
 
         Producto zapato = Producto.builder()
                 .nombre("Zapatos de Cuero")
-                .sexo(Sexo.HOMBRE)
+                .sexo(Sexo.MASCULINO)
                 .tipoProducto(TipoProducto.CALZADO)
                 .categorias(zapatos != null ? new HashSet<>(Arrays.asList(zapatos)) : new HashSet<>())
                 .build();
